@@ -23,7 +23,7 @@ HTML (HyperText Markup Language)은 웹페이지를 기술하기 위한 마크�
     </body>
 </html>
 ```
-![스크린샷 2023-09-22 오후 8.39.07.png](https://www.notion.so/dobbyreact/Hello-HTML5-b8a867fb3c1148418eaeab4f3f1ab852?pvs=4#05d0ebd240d14f4e888023c9d518c362.png)
+![스크린샷](https://www.notion.so/dobbyreact/Hello-HTML5-b8a867fb3c1148418eaeab4f3f1ab852?pvs=4#05d0ebd240d14f4e888023c9d518c362.png)
 
 # 3. HTML5의 기본 문법
 

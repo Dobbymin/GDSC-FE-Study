@@ -1,3 +1,8 @@
+# Hello HTML5
+
+: 1
+날짜: 2023년 9월 22일
+
 # 1. HTML5
 
 HTML (HyperText Markup Language)은 웹페이지를 기술하기 위한 마크업 언어이다.
@@ -23,7 +28,8 @@ HTML (HyperText Markup Language)은 웹페이지를 기술하기 위한 마크�
     </body>
 </html>
 ```
-![스크린샷](https://www.notion.so/dobbyreact/Hello-HTML5-b8a867fb3c1148418eaeab4f3f1ab852?pvs=4#05d0ebd240d14f4e888023c9d518c362.png)
+
+![스크린샷 2023-09-22 오후 8.39.07.png](Hello%20HTML5%20b8a867fb3c1148418eaeab4f3f1ab852/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-09-22_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.39.07.png)
 
 # 3. HTML5의 기본 문법
 
@@ -52,7 +58,7 @@ content를 가질 수 없는 요소를 빈 요소라 한다. 아래의 예와 �
 
 -   어트리뷰트는 요소에 추가적 정보 (이미지파일의 경로, 크기 등) 을 제공한다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/fa9bcf14-e8fb-4f87-a132-69cefc740723/a303eb77-0312-4ce2-bc66-af88ae06ed56/Untitled.png)
+![Untitled](Hello%20HTML5%20b8a867fb3c1148418eaeab4f3f1ab852/Untitled.png)
 
 ```html
 <img src="html.jpg" width="104" height="142" />
@@ -63,11 +69,15 @@ content를 가질 수 없는 요소를 빈 요소라 한다. 아래의 예와 �
 ### 3.2.1 글로벌 어트리뷰트
 
 | Attribute | Description                                                                                |
-| :-------: | :----------------------------------------------------------------------------------------- |
-|    id     | 유일한 식별자(id)를 요소에 지정한다. 중복지정 X                                            |
-|   class   | 스타일시트에 정의된 class를 요소에 지정한다. 중복지정 O                                    |
-|  hidden   | css의 hidden과는 다르게 의미상으로도 브라우저에 노출되지 않게 한다.                        |
-|   lang    | 지정된 요소의 언어를 지정한다. 검색엔진의 크롤링 시 웹페이지의 언어를 인식할 수 있게 한다. |
-|   style   | 요소에 인라인 스타일을 지정한다.                                                           |
+| --------- | ------------------------------------------------------------------------------------------ |
+| id        | 유일한 식별자(id)를 요소에 지정한다. 중복 지정 X                                           |
+| class     | 스타일시트에 정의된 class를 요소에 지정한다. 중복 지정 O                                   |
+| hidden    | css의 hidden과는 다르게 의미상으로도 브라우저에 노출되지 않게 된다.                        |
+| lang      | 지정된 요소의 언어를 지정한다. 검색엔진의 크롤링 시 웹페이지의 언어를 인식할 수 있게 한다. |
+| style     | 요소에 인라인 스타일을 지정한다.                                                           |
 | tabindex  | 사용자가 키보드로 페이지를 네비게이션 시 이동 순서를 지정한다.                             |
-|   title   | 요소에 관한 제목을 지정한다.                                                               |
+| title     | 요소에 관한 제목을 지정한다.                                                               |
+
+[HTML5: Global attributes](https://www.w3.org/TR/2010/WD-html-markup-20101019/global-attributes.html)
+
+Global attibutes

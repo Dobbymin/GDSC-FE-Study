@@ -196,7 +196,7 @@ header .icons .fa-search {
 .upNext > .title {
     font-size: var(--font-medium);
     color: var(--grey-dark-color);
-    margin-bottom: var(--spacing-small);
+    margin-bottom: var(--spacing);
 }
 
 .upNext .item {
@@ -225,10 +225,15 @@ header .icons .fa-search {
 }
 
 .upNext .item .itemInfo .title {
+    margin-top: var(--spacing-small);
     font-size: var(--font-small);
 }
 
-.upNext .item .itemInfo .name,
+.upNext .item .itemInfo .name {
+    margin-top: var(--spacing-small);
+    font-size: var(--font-micro);
+    color: var(--grey-dark-color);
+}
 .upNext .item .itemInfo .views {
     font-size: var(--font-micro);
     color: var(--grey-dark-color);
@@ -245,6 +250,6 @@ header .icons .fa-search {
     }
 
     .upNext {
-        padding: var(--spacing);
+        padding: var(--spacing) 0;
     }
 }

@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
         <title>Youtube Mobile</title>
+        <script src="https://kit.fontawesome.com/6811ddb39d.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- Header -->
@@ -31,7 +33,86 @@
                 allowfullscreen
             ></iframe>
         </section>
-        <section class="info"></section>
-        <section class="UpNext"></section>
+
+        <!-- Video Info -->
+        <section class="info">
+            <!-- Metadata -->
+            <div class="metadata">
+                <ul class="hashtags">
+                    <li>#코딩애플</li>
+                    <li>#GDSC</li>
+                    <li>#CSS_Study</li>
+                </ul>
+                <div class="tiltleAndButton">
+                    <span class="title"> 올해부턴 CSS 다르게 짬 ㅅㄱ (2022년 CSS 채신기술) </span>
+                    <button class="moreBtn">
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                </div>
+                <div class="views">
+                    <span class="views">조회수 114,839회 2021. 11. 27.</span>
+                </div>
+            </div>
+            <!-- Actions -->
+            <div class="actions">
+                <li>
+                    <button><i class="fas fa-thumbs-up"></i><span> 3천</span></button>
+                </li>
+                <li>
+                    <button><i class="fas fa-thumbs-down"></i><span> 1</span></button>
+                </li>
+                <li>
+                    <button><i class="fas fa-share"></i><span> 공유</span></button>
+                </li>
+                <li>
+                    <button><i class="fas fa-download"></i><span> 오프라인 저장</span></button>
+                </li>
+                <li>
+                    <button><i class="fa-solid fa-scissors"></i><span> 클립</span></button>
+                </li>
+                <li>
+                    <button><i class="fa-solid fa-file-export"></i><span> 저장</span></button>
+                </li>
+            </div>
+            <!-- Channel Description-->
+            <div class="channel">
+                <div class="metadata">
+                    <img src="./img/Coding_Apple.jpeg" alt="" />
+                    <div class="info">
+                        <span class="name">코딩애플</span>
+                        <span class="subscribers">구독자 19.7만명</span>
+                    </div>
+                </div>
+                <button class="subscribe">구독</button>
+            </div>
+        </section>
+
+        <!-- Video UpNext -->
+        <section class="UpNext">
+            <span class="title">다음 영상 보기</span>
+            <ul>
+                <li class="item">
+                    <img src="./img/html.jpeg" alt="" />
+                    <span class="title">html은 프로그래밍 언어 맞네요 역시</span>
+                    <span class="name">코딩애플</span>
+                    <span class="views">조회수 6.2만회 1개월 전</span>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <img src="./img/modern.jpeg" alt="" />
+                    <span class="title">2023 '모던' 웹개발자 하려면 배울 것들</span>
+                    <span class="name">코딩애플</span>
+                    <span class="views">조회수 10만회 9개월 전</span>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <img src="./img/gpt.jpeg" alt="" />
+                    <span class="title">진짜로 개발자 대체품 나옴 (GPT4 코드 인터프리터)</span>
+                    <span class="name">코딩애플</span>
+                    <span class="views">조회수 8.4만회 2개월 전</span>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+            </ul>
+        </section>
     </body>
 </html>

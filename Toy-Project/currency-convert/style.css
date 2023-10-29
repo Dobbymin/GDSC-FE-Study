@@ -1,17 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.exchange-box {
+    border: 1px solid black;
+    width: 400px;
+}
+
 /* Style The Dropdown Button */
 .dropbtn {
-    background-color: #4caf50;
+    background-color: #4455cf;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    width: 100%;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
+    width: 100%;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -19,6 +38,7 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
+    width: 100%;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -44,5 +64,23 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #5160cd;
+}
+
+.input-area {
+    width: 100%;
+    text-align: right;
+}
+
+.input-area input {
+    width: 100%;
+}
+
+.same-icon {
+    font-size: 2rem;
+    font-weight: 900;
+
+    color: #000;
+
+    text-align: center;
 }

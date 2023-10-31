@@ -31,7 +31,7 @@ document.querySelectorAll('#from-currency-list a').forEach((menu) =>
         document.getElementById('from-button').textContent = this.textContent;
         // 3. 선택된 currency 값을 변수에 저장해둔다.
         fromCurrency = this.textContent;
-        console.log(`fromCurrency는 ${fromCurrency}`);
+        convert();
     })
 );
 
@@ -44,11 +44,25 @@ document.querySelectorAll('#to-currency-list a').forEach((menu) =>
         // document.getElementById('from-button');
         // 2. 버튼의 값을 바꾼다.
         document.getElementById('to-button').textContent = this.textContent;
+
         // 3. 선택된 currency 값을 변수에 저장해둔다.
         toCurrency = this.textContent;
         console.log(`toCurrency는 ${toCurrency}`);
+        convert();
     })
 );
 // document.querySelectorAll('#to-currency-list a');
 
 // console.log(document.querySelectorAll('#from-currency-list a'));
+
+function convert() {
+    // 1. 환전
+    // 얼마를 환전? 가지고 있는 돈이 뭔지, 바꾸고자 하는 돈이 뭔지
+    // 돈 * 환율 = 환전금액
+
+    let amount = document.getElementById('from-input').value;
+    let convertedAmount = amount * currencyRatio[fromCurrency][toCurrency];
+    console.log('환전 결과!', convertedAmount);
+
+    document.getElementById('to-input').value = convertedAmount;
+}

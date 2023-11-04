@@ -20,6 +20,10 @@ let currencyRatio = {
     },
 };
 
+let unitWords = ['', '만', '억', '조', '경'];
+
+let toButton = document.getElementById('to-button');
+let fromButton = document.getElementById('from-button');
 let fromCurrency = 'USD';
 
 /** id 가 from-currency-list 인데, 그 안에서 a 태그들 */
@@ -28,7 +32,7 @@ document.querySelectorAll('#from-currency-list a').forEach((menu) =>
         // 1. 버튼을 가져온다
         // document.getElementById('from-button');
         // 2. 버튼의 값을 바꾼다.
-        document.getElementById('from-button').textContent = this.textContent;
+        fromButton.textContent = this.textContent;
         // 3. 선택된 currency 값을 변수에 저장해둔다.
         fromCurrency = this.textContent;
         convert();
@@ -43,7 +47,7 @@ document.querySelectorAll('#to-currency-list a').forEach((menu) =>
         // 1. 버튼을 가져온다
         // document.getElementById('from-button');
         // 2. 버튼의 값을 바꾼다.
-        document.getElementById('to-button').textContent = this.textContent;
+        toButton.textContent = this.textContent;
 
         // 3. 선택된 currency 값을 변수에 저장해둔다.
         toCurrency = this.textContent;
@@ -51,6 +55,7 @@ document.querySelectorAll('#to-currency-list a').forEach((menu) =>
         convert();
     })
 );
+
 // document.querySelectorAll('#to-currency-list a');
 
 // console.log(document.querySelectorAll('#from-currency-list a'));

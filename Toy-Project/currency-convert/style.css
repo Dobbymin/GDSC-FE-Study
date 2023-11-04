@@ -69,10 +69,13 @@ body {
 
 .input-area {
     width: 100%;
+
     text-align: right;
 }
 
 .input-area input {
+    padding-top: 5px;
+    padding-bottom: 5px;
     width: 100%;
 }
 

@@ -7,8 +7,13 @@ function App() {
     /** 들어온 숫자들을 2배로 만들어준다. */
     const double = () => {
         // const doubleNumber = number * 2;
-        setNumber((prevState) => prevState * 2);
-        setNumber((prevState) => prevState * 2);
+        setNumber((prevState) => {
+            return prevState * 2;
+        });
+
+        setNumber((prevState) => {
+            return prevState * 2;
+        });
     };
 
     return (

@@ -17,8 +17,8 @@
                 </div>
             </div>
             <div class="input-area">
-                <input type="number" />
-                <div>달러</div>
+                <input type="number" id="from-input" placeholder="금액을 입력하세요." onkeyup="convert()" />
+                <div id="from-unit">달러</div>
             </div>
         </div>
 
@@ -30,12 +30,12 @@
                 <div class="dropdown-content" id="to-currency-list">
                     <a href="#">USD</a>
                     <a href="#">KRW</a>
-                    <a href="#">VND </a>
+                    <a href="#">VND</a>
                 </div>
             </div>
             <div class="input-area">
-                <input type="number" />
-                <div>달러</div>
+                <input type="number" id="to-input" onkeyup="convert()" />
+                <div id="to-unit">달러</div>
             </div>
         </div>
 

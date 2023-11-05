@@ -1,28 +1,57 @@
 import './App.css';
 import { useState } from 'react';
+import axios from 'axios';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
-    const [number, setNumber] = useState(1);
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
 
-    /** 들어온 숫자들을 2배로 만들어준다. */
-    const double = () => {
-        // const doubleNumber = number * 2;
-        setNumber((prevState) => {
-            return prevState * 2;
-        });
-
-        setNumber((prevState) => {
-            return prevState * 2;
+    const onSubmit = () => {
+        axios.post('http://localhost:3001/posts', {
+            title,
+            body,
         });
     };
 
     return (
-        <>
-            <div>{number}</div>
-            <button className="btn btn-primary" onClick={double}>
-                Submit
-            </button>
-        </>
+        <Router>
+            <div>
+                <Link to="/">home</Link>
+                <Link to="/blogs">Blogs</Link>
+            </div>
+            <Switch>
+                <Route path="/">Home Page</Route>
+                <Route path="/blogs">
+                    <div className="container">
+                        <div className="mb-3">
+                            <label className="form-label">Title</label>
+                            <input
+                                className="form-control"
+                                value={title}
+                                onChange={(e) => {
+                                    setTitle(e.target.value);
+                                }}
+                            />
+                        </div>
+
+                        <div className="mb-3">
+                            <label className="form-label">Body</label>
+                            <textarea
+                                className="form-control"
+                                value={body}
+                                onChange={(e) => {
+                                    setBody(e.target.value);
+                                }}
+                            />
+                        </div>
+                        <button className="btn btn-primary" onClick={onSubmit}>
+                            Post
+                        </button>
+                    </div>
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 

@@ -1,56 +1,24 @@
 import './App.css';
-import { useState } from 'react';
-import axios from 'axios';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import BlogForm from './components/BlogForm';
+import NavBar from './components/NavBar';
+import HomePage from './pages/HomePage';
+import ListPage from './pages/ListPage';
+import EditPage from './pages/EditPage';
+import CreatePage from './pages/CreatePage';
 
 function App() {
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
-
-    const onSubmit = () => {
-        axios.post('http://localhost:3001/posts', {
-            title,
-            body,
-        });
-    };
-
     return (
         <Router>
-            <div>
-                <Link to="/">home</Link>
-                <Link to="/blogs">Blogs</Link>
+            <NavBar />
+            <div className="container">
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/blogs" element={<ListPage />} />
+                    <Route path="/blogs/create" element={<CreatePage />} />
+                    <Route path="/blogs/edit" element={<EditPage />} />
+                </Routes>
             </div>
-            <Switch>
-                <Route path="/">Home Page</Route>
-                <Route path="/blogs">
-                    <div className="container">
-                        <div className="mb-3">
-                            <label className="form-label">Title</label>
-                            <input
-                                className="form-control"
-                                value={title}
-                                onChange={(e) => {
-                                    setTitle(e.target.value);
-                                }}
-                            />
-                        </div>
-
-                        <div className="mb-3">
-                            <label className="form-label">Body</label>
-                            <textarea
-                                className="form-control"
-                                value={body}
-                                onChange={(e) => {
-                                    setBody(e.target.value);
-                                }}
-                            />
-                        </div>
-                        <button className="btn btn-primary" onClick={onSubmit}>
-                            Post
-                        </button>
-                    </div>
-                </Route>
-            </Switch>
         </Router>
     );
 }

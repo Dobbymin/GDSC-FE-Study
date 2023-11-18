@@ -1,28 +1,25 @@
 import './App.css';
-import { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import BlogForm from './components/BlogForm';
+import NavBar from './components/NavBar';
+import HomePage from './pages/HomePage';
+import ListPage from './pages/ListPage';
+import EditPage from './pages/EditPage';
+import CreatePage from './pages/CreatePage';
 
 function App() {
-    const [number, setNumber] = useState(1);
-
-    /** 들어온 숫자들을 2배로 만들어준다. */
-    const double = () => {
-        // const doubleNumber = number * 2;
-        setNumber((prevState) => {
-            return prevState * 2;
-        });
-
-        setNumber((prevState) => {
-            return prevState * 2;
-        });
-    };
-
     return (
-        <>
-            <div>{number}</div>
-            <button className="btn btn-primary" onClick={double}>
-                Submit
-            </button>
-        </>
+        <Router>
+            <NavBar />
+            <div className="container">
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/blogs" element={<ListPage />} />
+                    <Route path="/blogs/create" element={<CreatePage />} />
+                    <Route path="/blogs/edit" element={<EditPage />} />
+                </Routes>
+            </div>
+        </Router>
     );
 }
 

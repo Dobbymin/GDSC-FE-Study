@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from '../components/Card';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ListPage = () => {
+    const navigate = useNavigate();
     const [posts, setPosts] = useState([]);
 
     const getPosts = () => {
@@ -27,7 +28,7 @@ const ListPage = () => {
                 </div>
             </div>
             {posts.map((post) => {
-                return <Card key={post.id} title={post.title} onClick={() => console.log('dobby is free')} />;
+                return <Card key={post.id} title={post.title} onClick={() => navigate('/blogs/edit')} />;
             })}
         </div>
     );

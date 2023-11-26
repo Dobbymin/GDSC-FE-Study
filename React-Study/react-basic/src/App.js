@@ -1,22 +1,16 @@
-import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import BlogForm from './components/BlogForm';
 import NavBar from './components/NavBar';
-import HomePage from './pages/HomePage';
-import ListPage from './pages/ListPage';
-import EditPage from './pages/EditPage';
-import CreatePage from './pages/CreatePage';
+import routes from './routes';
 
 function App() {
     return (
         <Router>
             <NavBar />
-            <div className="container">
+            <div className="container mt-3">
                 <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/blogs" element={<ListPage />} />
-                    <Route path="/blogs/create" element={<CreatePage />} />
-                    <Route path="/blogs/edit" element={<EditPage />} />
+                    {routes.map((route) => {
+                        return <Route key={route.path} path={route.path} element={<route.component />} />;
+                    })}
                 </Routes>
             </div>
         </Router>

@@ -1,5 +1,4 @@
-import React from 'react';
-import propsTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 const Card = ({ title, onClick, children }) => {
     // {title: 'title}
@@ -15,10 +14,10 @@ const Card = ({ title, onClick, children }) => {
     );
 };
 
-Card.propsTypes = {
-    title: propsTypes.string.isRequired,
-    children: propsTypes.element,
-    onClick: propsTypes.func,
+Card.propTypes = {
+    title: propTypes.string.isRequired,
+    children: propTypes.element,
+    onClick: propTypes.func,
 };
 
 Card.defaultProps = {

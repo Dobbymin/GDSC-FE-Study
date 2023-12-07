@@ -11,6 +11,7 @@ const ListPage = () => {
     const getPosts = () => {
         axios.get('http://localhost:3001/posts').then((res) => {
             setPosts(res.data);
+            setLoading(false);
         });
     };
 
@@ -36,7 +37,13 @@ const ListPage = () => {
                     </Link>
                 </div>
             </div>
-            {posts.length > 0 ? (
+            {loading ? (
+                <div className="d-flex justify-content-center">
+                    <div className="spinner-border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            ) : posts.length > 0 ? (
                 posts.map((post) => {
                     return (
                         <Card key={post.id} title={post.title} onClick={() => navigate('/blogs/edit')}>

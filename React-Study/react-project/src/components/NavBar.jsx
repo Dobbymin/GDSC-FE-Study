@@ -9,12 +9,9 @@ const NavBar = () => {
                 </Link>
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <NavLink
-                            className={({ isActive }) => (isActive ? 'nav-link' : ' ')}
-                            aria-current="page"
-                            to="/blogs"
-                        >
-                            Blogs
+                        <NavLink to="/blogs" className="nav-link" activeClassName="active" end>
+                            {' '}
+                            Blogs{' '}
                         </NavLink>
                     </li>
                 </ul>

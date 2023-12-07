@@ -9,9 +9,8 @@ const NavBar = () => {
                 </Link>
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <NavLink to="/blogs" className="nav-link" activeClassName="active" end>
-                            {' '}
-                            Blogs{' '}
+                        <NavLink to="/blogs" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+                            Blogs
                         </NavLink>
                     </li>
                 </ul>
